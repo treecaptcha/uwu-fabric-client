@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "uwu",
+  "version": "${version}",
+  "name": "UwU",
+  "description": "Hewwo >_<",
+  "authors": [
+    "Ran"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/UwU/icon-nobg.png",
+  "environment": "client",
+  "entrypoints": {
+    "modmenu": [
+      "io.github.ran.uwu.client.config.ModMenu"
+    ]
+  },
+  "mixins": [
+    "uwu.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "*"
+  }
+}
