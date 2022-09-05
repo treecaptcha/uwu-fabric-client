@@ -5,7 +5,9 @@
   "name": "UwU",
   "description": "Hewwo >_<",
   "authors": [
-    "Ran"
+    "Ran",
+    "TreeCaptcha",
+    "RoostersEatYou"
   ],
   "contact": {
     "repository": "https://github.com/treecaptcha/uwu-fabric-client"
