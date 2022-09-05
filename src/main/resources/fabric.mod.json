@@ -10,7 +10,9 @@
     "RoostersEatYou"
   ],
   "contact": {
-    "repository": "https://github.com/treecaptcha/uwu-fabric-client"
+    "sources": "https://github.com/treecaptcha/uwu-fabric-client",
+    "issues": "https://github.com/treecaptcha/uwu-fabric-client/issues",
+    "homepage": "https://github.com/treecaptcha/uwu-fabric-client"
   },
   "license": "MIT",
   "icon": "assets/UwU/icon-nobg.png",
