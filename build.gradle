@@ -10,6 +10,8 @@ group = project.maven_group
 repositories {
     maven { url = "https://repo.sk1er.club/repository/maven-public" }
     maven { url "https://maven.terraformersmc.com/" }
+    maven { url "https://repo.essential.gg/repository/maven-public"}
+
 }
 
 configurations {
@@ -24,8 +26,11 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Gui
-    modImplementation "gg.essential:vigilance-${project.vigilance_minecraft_version}-fabric:${project.vigilance_version}"
+    modImplementation(include("gg.essential:universalcraft-${universal_craft_minecraft_version}-fabric:${universal_craft_version}"))
+    modImplementation(include("gg.essential:vigilance-${project.vigilance_minecraft_version}-fabric:${project.vigilance_version}"))
+
     shade "gg.essential:vigilance-${project.vigilance_minecraft_version}-fabric:${project.vigilance_version}"
+    shade "gg.essential:universalcraft-${universal_craft_minecraft_version}-fabric:${universal_craft_version}"
     modImplementation("com.terraformersmc:modmenu:${rootProject.modmenu_version}")
 }
 
@@ -33,7 +38,7 @@ shadowJar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     configurations = [project.configurations.getByName("shade")]
     classifier "dev-shadow"
-    relocate 'gg.essential.vigilance', 'io.github.ran.uwu.vigilance'
+    //relocate 'gg.essential.vigilance', 'io.github.ran.uwu.vigilance'
     relocate 'net.fabricmc', 'cancelled.on.twitter.fabricmc'
 }
 
